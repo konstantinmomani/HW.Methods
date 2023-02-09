@@ -4,6 +4,12 @@ import java.time.LocalDate;
 
 public class Methods {
 
+    public static void main(String[] args) {
+        task1();
+        task2();
+        task3();
+    }
+
     public static boolean isItleapYear(int year) {
         return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
     }
@@ -40,13 +46,6 @@ public class Methods {
             deliveryTime = "Доставки нет!";
         }
         return deliveryTime;
-    }
-
-    public static void main(String[] args) {
-
-        task1();
-        task2();
-        task3();
     }
 
     public static void task1() {
