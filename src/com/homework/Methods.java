@@ -28,6 +28,20 @@ public class Methods {
         return osType;
     }
 
+    public static String amountDays(int distance) {
+        String deliveryTime;
+        if (distance <= 20) {
+            deliveryTime = "Потребуется дней: 1";
+        } else if (distance > 20 && distance < 60) {
+            deliveryTime = "Потребуется дней: 2";
+        } else if (distance > 60 && distance < 100) {
+            deliveryTime = "Потребуется дней: 3";
+        } else {
+            deliveryTime = "Доставки нет!";
+        }
+        return deliveryTime;
+    }
+
     public static void main(String[] args) {
 
         task1();
@@ -43,7 +57,6 @@ public class Methods {
         } else {
             System.out.println(year + " год не является високосным");
         }
-
     }
 
     public static void task2() {
@@ -58,14 +71,7 @@ public class Methods {
     public static void task3() {
         System.out.println("Задача3");
         int deliveryDistance = 100;
-        if (deliveryDistance <= 20) {
-            System.out.println("Потребуется дней: 1");
-        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
-            System.out.println("Потребуется дней: 2");
-        } else if (deliveryDistance > 60 && deliveryDistance < 100) {
-            System.out.println("Потребуется дней: 3");
-        } else {
-            System.out.println("Доставки нет!");
-        }
+        String deliveryDays = amountDays(deliveryDistance);
+        System.out.println(deliveryDays);
     }
 }
