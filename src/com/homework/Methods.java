@@ -26,7 +26,8 @@ public class Methods {
 
     public static String deviceYear(int year) {
         String osType;
-        if (year == 2023) {
+        int currentYear = LocalDate.now().getYear();
+        if (year == currentYear) {
             osType = "стандартную";
         } else {
             osType = "облегченную";
@@ -61,7 +62,7 @@ public class Methods {
     public static void task2() {
         System.out.println("Задача2");
         int clientOS = 0;
-        int clientDeviceYear = 2023;
+        int clientDeviceYear = 2022;
         String osName = deviceOS(clientOS);
         String osType = deviceYear(clientDeviceYear);
         System.out.println("Уствновите " + osType + " версию для " + osName);
